@@ -1,11 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <!DOCTYPE html>
+<html> -->
+
+<!-- <div>
+  <head>
+    <title>Header Fixo</title>
+    <style>
+      body {
+        margin: 50;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      .conteudo {
+        padding-top: 70px; /* Ajuste o valor conforme a altura do header */
+        /* Preencha o restante do estilo do conteúdo aqui */
+      }
+    </style>
+  </head>
+</div> -->
+<!-- <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to ba bla {{ title }}!
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
+</div> -->
+<!-- <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
@@ -16,5 +44,194 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
 
+<!DOCTYPE html>
+<html>
+
+<head>  
+  <title>Banco do Brasil - Atendimento Cartoes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <section>
+    <div class="container__header" >
+    <!-- <div class="container">
+      <div class="row"> -->
+        <div class="col-12">
+          <h1 class="cabecalho mb-0 pl-3">{{title}}</h1>
+        </div>
+        <div class="col- 12">
+          <img src="../img/bb.png" [alt]="description" class="logo pr-4">
+        </div>
+    </div>
+        <!-- <div class="col-3">
+          3 of 3
+        </div> -->
+      <!-- </div>
+    </div>     -->
+  </section>
+  <section class="conteudo">
+    <div>
+      <h2 class="my-4">Registro de Ocorrência</h2>
+    </div>
+
+  </section>
+  <div class="conteudo">
+    <!-- Seu conteúdo aqui -->
+    <h2 class="my-4">Registro de Ocorrência</h2>
+
+    <form>
+      <h5 class="mt-1 mb-3">Dados do cliente: </h5>
+      <!-- Name input -->
+      <div class="form-outline mb-2">
+        <input type="text" id="form4Example1" class="form-control" />
+        <label class="form-label" for="form4Example1">Nome</label>
+      </div>
+    
+      <!-- Email input -->
+      <!-- <div class="form-outline mb-2">
+        <input type="email" id="form4Example2" class="form-control" />
+        <label class="form-label" for="form4Example2">Email address</label>
+      </div> -->
+
+      <!-- CPF  -->
+      <div class="form-row">
+        <div class="form-outline col-md-6 mb-2">
+          <input type="text" class="form-control">
+          <label class="form-label" for="form4Example2">CPF</label>
+        </div>
+        <!-- <div class="form-outline col-md-6 mb-4">
+          <input type="ph" class="form-control">
+          <label class="form-label" for="form4Example2">CPF</label>
+        </div> id="form6Example6" -->
+        <div class="form-outline col-md-6 mb-2">
+          <input type="text" class="form-control" />
+          <label class="form-label" for="form6Example6">Telefone</label>
+        </div>        
+      </div>
+      <h5 class="mt-1 mb-3">Dados do cartão: </h5>
+      <div class="form-row">
+        <div class="form-outline col-md-6 mb-2">
+          <input type="text" class="form-control" />
+          <label class="form-label" for="form6Example6">Número do Cartão</label>
+        </div> 
+        <select class="browser-default custom-select col-md-5 mb-4 mx-1" aria-label="Default select example" 
+        id="tipoCartao" onchange="atualizarOpcoesCartao()">
+          <option selected>Tipo Cartão</option>
+          <option value="debito">Débito</option>
+          <option value="credito">Crédito</option>
+        </select>
+      </div>
+      <h5 class="mt-1 mb-3">Ocorrência: </h5>
+      <select class="browser-default custom-select col-md-6 mb-4 ml-1 mr-3" id="cartao" aria-label="Default select example">
+        <option selected>Assunto</option>
+        <option value="1">Entrega do Cartão</option>
+        <option value="2">Bloqueio</option>
+        <option value="3">Desbloqueio</option>
+        <option value="4">Cancelamento</option>
+        <option value="5">Senha</option>
+        <option value="6">Problemas com Compras</option>
+        <option value="7">Outros</option>
+      </select>
+      
+
+    
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+        <label class="form-label" for="form4Example3">Descrição da Ocorrência</label>
+      </div>
+    
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
+        <label class="form-check-label" for="form4Example4">
+          Send me a copy of this message
+        </label>
+      </div>
+    
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Send
+      </button>
+    </form>
+
+
+
+
+
+    <!-- <form class="example-form">
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+    </form> -->
+    <form>
+      <!-- <div class="flex-container">
+        <label>STACKS</label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>    
+      </div> -->
+
+
+      <div class="input-group mb-3">
+        <span class="input-group-text pb-2" id="basic-addon1">Nome do Cliente</span>
+        <input type="text" class="form-control " placeholder="Nome completo" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="container">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+              <label>CPF</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-4">
+              <label>CNPJ</label>
+              <input type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-4">
+              <label>CEP</label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+          </div>
+
+          <div class="container">
+            <div class="form-row">    
+      <div class="input-group mb-3  col-md-4">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo Cartão</label>
+      </div>
+
+      
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected> -- </option>
+          <option value="1"> Débito</option>
+          <option value="2"> Crédito</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label class="input-group-text">Descrição Ocorrência</label>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    <!-- </form> -->
+
+
+
+
+  </div>
+<!-- </body> -->
+<!-- </html> -->

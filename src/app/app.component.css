@@ -1,0 +1,40 @@
+label {
+    /* margin: 0;
+    padding: 0; */
+    font-size: 14px;
+}
+
+.container__header{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background-color: #FCFC30;
+    color: #465EFF;
+    padding: 10px;
+    /* text-align: center; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-left: 25px;
+    margin-right: 25px; */
+}
+
+img {
+    width: 70px
+}
+
+.conteudo {
+    margin: 20px;
+    /* margin-right: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #465EFF;
+    /* padding-top: 70%; Ajuste o valor conforme a altura do header */
+    /* Preencha o restante do estilo do conteúdo aqui */
+}
+
+
+.logo{
+    text-align: none;
+    align-content: end;
+}
